@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3F132D411E80695F004ECC38 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F132D401E80695F004ECC38 /* Example.swift */; };
+		3F132D471E807B45004ECC38 /* ConcreteExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F132D461E807B45004ECC38 /* ConcreteExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F132D3D1E80695F004ECC38 /* Example.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Example.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F132D401E80695F004ECC38 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		3F132D421E80695F004ECC38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F132D461E807B45004ECC38 /* ConcreteExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcreteExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				3F132D401E80695F004ECC38 /* Example.swift */,
+				3F132D461E807B45004ECC38 /* ConcreteExample.swift */,
 				3F132D421E80695F004ECC38 /* Info.plist */,
 			);
 			path = Example;
@@ -120,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F132D411E80695F004ECC38 /* Example.swift in Sources */,
+				3F132D471E807B45004ECC38 /* ConcreteExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
