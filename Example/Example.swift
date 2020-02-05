@@ -30,6 +30,6 @@ class ExampleTestCase: XCTestCase {
         let service = SomeService()
         service.performAsynSideEffect(on: foo)
 
-        waitForExpectations(timeout: 1, handler: .none)
+        waitForExpectations(timeout: 10, handler: .none)
     }
 }

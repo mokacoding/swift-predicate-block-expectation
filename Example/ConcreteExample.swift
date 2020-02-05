@@ -36,6 +36,6 @@ class ProductViewConfiguratorTests: XCTestCase {
 
         configurator.configure(withProductId: 123)
 
-        waitForExpectations(timeout: 1, handler: .none)
+        waitForExpectations(timeout: 10, handler: .none)
     }
 }
