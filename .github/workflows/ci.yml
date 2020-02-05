@@ -1,0 +1,30 @@
+name: 🛠 Unit Tests
+on: push
+jobs:
+  build:
+    name: Run Unit Test
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 💎Cache Gems
+        id: cache-gems
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: 📦 Bundle Gems
+        if: steps.cache-gems.outputs.cache-hit != 'true'
+        run: bundle install
+
+      - name: 🛠 Run Unit Tests
+        run: |
+          xcodebuild \
+            -scheme Example \
+            -project PredicateBlockExpectationExample.xcodeproj \
+            -destination 'platform=iOS Simulator,name=iPhone 11 Pro' \
+            test \
+            | bundle exec xcpretty
