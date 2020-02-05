@@ -13,7 +13,7 @@ class ProductViewConfigurator {
     }
 
     func configure(withProductId id: Int) {
-        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.2) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
             guard let strongSelf = self else { return }
 
             strongSelf.view.name.text = "Foo"
