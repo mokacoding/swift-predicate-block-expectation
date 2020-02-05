@@ -9,7 +9,7 @@ class Foo {
 }
 
 class SomeService {
-    func performAsynSideEffect(on foo: Foo) {
+    func performAsyncSideEffect(on foo: Foo) {
         DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 0.2) {
             foo.x = !foo.x
         }
@@ -28,7 +28,7 @@ class ExampleTestCase: XCTestCase {
         _ = self.expectation(for: predicate, evaluatedWith: foo, handler: .none)
 
         let service = SomeService()
-        service.performAsynSideEffect(on: foo)
+        service.performAsyncSideEffect(on: foo)
 
         waitForExpectations(timeout: 10, handler: .none)
     }
